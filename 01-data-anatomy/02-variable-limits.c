@@ -11,7 +11,7 @@ int main (void) {
     printf("\n=== Experiment : Overstepping the Limit ===\n");
 
     /* What happens if we add 1 to the maximum INT? */
-    int max_plus_one = INT_MAX + 1;
+    int max_plus_one = INT_MAX + 1; // Ignore the warning for experimental purposes
     printf("Maximum INT     : %d\n", INT_MAX);
     printf("Maximum INT + 1 : %d (Overflow occured!)\n", max_plus_one);
 
