@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main () {
+int main (void) {
     int input = 0;
 
     printf("====== Logic Control: System Loop ======\n\n");

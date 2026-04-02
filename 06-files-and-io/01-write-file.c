@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main () {
+int main (void) {
     /* FILE pointer to manage communication with the disk */
     FILE *fptr = NULL;
 

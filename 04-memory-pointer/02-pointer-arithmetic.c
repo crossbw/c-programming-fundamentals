@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main () {
+int main (void) {
     int numbers[3] = {10, 20, 30};
     int *ptr = numbers; // Pointer points to the first element [0]
 

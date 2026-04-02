@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main () {
+int main (void) {
     FILE *fptr = NULL;
     char buffer[100]; // Temporary buffer to store a line of text
 

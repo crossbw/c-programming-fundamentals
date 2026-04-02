@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main () {
+int main (void) {
     printf("====== Data Anatomy: Memory Size Analysis ======\n\n");
 
     /* Printing the actual size of each data type in Bytes*/

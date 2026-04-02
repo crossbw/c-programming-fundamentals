@@ -3,7 +3,7 @@
 #include "invoice.h"
 #include "utils.h"
 
-int main () {
+int main (void) {
     int price = 5000;
     int qty = 3;
     float discount = 0.15;

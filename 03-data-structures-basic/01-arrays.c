@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main () {
+int main (void) {
     /* Declaring an Array of 5 integers */
     int ages[5] = {21, 23, 19, 25, 30};
 

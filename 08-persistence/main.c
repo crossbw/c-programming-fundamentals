@@ -3,7 +3,7 @@
 #include "invoice.h"
 #include "utils.h"
 
-int main () {
+int main (void) {
     int n;
     print_banner();
 

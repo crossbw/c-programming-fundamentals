@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main () {
+int main (void) {
     int menu = 0;
     printf("====== Logic Control: Do-While Menu ======\n\n");
     

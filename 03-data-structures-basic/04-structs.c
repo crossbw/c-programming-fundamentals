@@ -9,7 +9,7 @@ struct Invoice {
     int item_count;
 };
 
-int main () {
+int main (void) {
     struct Invoice inv1;
 
     printf("====== Data Structures: Structs (Objects) ======\n\n");

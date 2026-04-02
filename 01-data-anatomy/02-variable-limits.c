@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <limits.h>
 
-int main () {
+int main (void) {
     printf("====== Data Anatomy : Variable Limits ======\n\n");
 
     /* Using constants from limits.h to see the range of each type */

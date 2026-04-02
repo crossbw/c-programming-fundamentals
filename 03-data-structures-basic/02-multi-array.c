@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main () {
+int main (void) {
     /* A table with 3 rows and 2 columns [Rows][Cols]*/
     /* Let's say: [Customer ID][Customer Age] */
     int customers[4][2] = {

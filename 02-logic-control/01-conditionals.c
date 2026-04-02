@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main () {
+int main (void) {
     int access_code;
     const int SECRET_KEY = 1234;
 

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main () {
+int main (void) {
     printf("====== Logic Control : Rocket Launch ======");
 
     /* For (start variable; condition; increment/decrement) */

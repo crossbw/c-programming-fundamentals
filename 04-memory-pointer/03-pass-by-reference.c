@@ -6,7 +6,7 @@ void update_stock (int *stock_ptr, int items_sold) {
     printf(">> Logging: Stock updated in memory.\n");
 }
 
-int main () {
+int main (void) {
     int current_stock = 100;
 
     printf("====== Memory: Pass by Reference ======\n\n");

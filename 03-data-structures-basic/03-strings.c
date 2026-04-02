@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int main(void) {
     /* Method 1: Pre-defined string */
     char name[] = "Fedora-Linux";
 

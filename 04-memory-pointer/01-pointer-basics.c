@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main () {
+int main (void) {
     int age = 23;
     /* A pointer variable that stores the ADDRESS of an integer */
     int *ptr = &age;

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main () {
+int main (void) {
     int *ptr = NULL;
     int initial_size = 2;
     int new_size = 4;

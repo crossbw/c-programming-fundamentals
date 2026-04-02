@@ -4,7 +4,7 @@
 #define PI 3.14159
 #define MAX_USERS 100
 
-int main () {
+int main (void) {
     /* Using 'const' keyword for Local Constants*/
     const float GRAVITY = 9.18;
     
