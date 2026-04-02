@@ -1,36 +1,40 @@
 # C Programming Fundamentals
 
-This repository documents my journey of learning the C programming language from scratch. The goal is to deeply understand how computer memory and logic work at a low level.
+This repository documents my journey in learning the C programming language from scratch, with a strong focus on low-level concepts such as memory management, pointers, and program logic.
+
+The goal of this project is to build a solid foundation in how software interacts with memory and system resources.
 
 ## Environment
 
-- **OS:** Fedora Linux (KDE Plasma)
+- **OS:** Linux (Fedora KDE Plasma)
 - **Compiler:** GCC
 - **Tools:** VS Code, Konsole
 
 ## Project Structure
 
-The learning process is divided into several modules:
+The learning process is organized into modular sections:
 
-- `00-syntax-basics` — Initial setup and basic C structure.
-- `01-data-anatomy` — Understanding data types, memory sizes, and limits.
-- `02-logic-control` — Conditionals (`if-else`, `switch`) and loops (`for`, `while`, `do-while`).
-- `03-data-structures-basic` — Arrays, Strings, and Structs.
-- `04-memory-pointer` — Memory addresses, dereferencing, and pass-by-reference.
+- `00-syntax-basics` — Initial setup and fundamental C syntax.
+- `01-data-anatomy` — Data types, memory sizes, and limits.
+- `02-logic-control` — Control flow: conditionals (`if-else`, `switch`) and loops (`for`, `while`, `do-while`).
+- `03-data-structures-basic` — Arrays, strings, and structs.
+- `04-memory-pointer` — Memory addresses, pointers, dereferencing, and pass-by-reference.
 - `05-advanced-memory` — Dynamic memory allocation using `malloc` and `realloc`.
-- `06-files-and-io` — Reading and writing persistent data using `.txt` files.
+- `06-files-and-io` — File handling using text-based storage (`.txt`).
+- `07-modular-programming` — Code modularization using header/source files, header guards, and build automation with **Makefiles**.
+- `08-persistence` — Data persistence using binary file I/O (`.dat`) and dynamic struct arrays.
 
-## What I've Learned
+## Key Learnings
 
-- Manual memory management and how to avoid memory leaks.
+- Manual memory management and memory safety practices.
 - Differences between stack and heap allocation.
 - Direct memory manipulation using pointers.
-- Building foundational logic for a CLI-based mini ERP/Invoicing system.
+- Designing and implementing a CLI-based mini ERP/invoicing system.
 
 ## Future Plans
 
-- Implement more advanced data structures (linked lists, stack, queue).
-- Build a more complete CLI-based application.
+- Implement advanced data structures (linked lists, stacks, queues).
+- Develop a more complete CLI-based application.
 - Explore simple file-based database systems in C.
 
 ## How to Run

@@ -1,6 +1,6 @@
 # 07 - Modular Programming & Build Automation
 
-This section marks my transition from monolithic code (single-file programs) to a modular system. I learned how to decouple logic, manage dependencies, and automate the build process on Fedora Linux.
+This module represents a key milestone in my C fundamentals journey. It focuses on transitioning from monolithic code (single-file programs) to a modular system by applying principles such as separation of concerns, dependency management, and build automation in a Linux environment.
 
 ## Key Concepts Learned
 

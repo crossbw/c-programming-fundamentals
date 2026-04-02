@@ -1,6 +1,6 @@
 # 08 - Data Persistence & Struct Arrays
 
-This is the final module of my C fundamentals journey. In this section, I integrated multiple advanced concepts to build a persistent Mini-ERP system that stores data on physical storage in my Fedora Linux environment.
+This module represents a key milestone in my C fundamentals journey, focusing on building a persistent Mini-ERP system that stores data on physical storage in a Linux environment.
 
 ## Key Concepts Learned
 
