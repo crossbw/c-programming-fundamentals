@@ -1,17 +1,24 @@
+ifeq ($(OS),Windows_NT)
+    RM = del /Q 2>NUL
+    EXT = .exe
+else
+    RM = rm -f
+    EXT =
+endif
+
 CC = gcc
-CFLAGS = -Wall
+CFLAGS = -Wall -Wextra -std=c11
+TARGET = cli-calculator$(EXT)
+OBJ = main.o utils.o calculator.o
 
-cli-calculator: main.o utils.o calculator.o
-				$(CC) main.o utils.o calculator.o -o cli-calculator
+all: $(TARGET)
 
-main.o: main.c
-	$(CC) $(CFLAGS) -c main.c
+$(TARGET): $(OBJ)
+	$(CC) $(OBJ) -o $(TARGET)
 
-utils.o: utils.c
-	$(CC) $(CFLAGS) -c utils.c
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
-calculator.o: calculator.c
-	$(CC) $(CFLAGS) -c calculator.c
-
-clean: 
-		rm *.o cli-calculator
+.PHONY: clean
+clean:
+	$(RM) *.o $(TARGET)
