@@ -1,31 +1,72 @@
 # 07 - Modular Programming & Build Automation
 
-This module represents a key milestone in my C fundamentals journey. It focuses on transitioning from monolithic code (single-file programs) to a modular system by applying principles such as separation of concerns, dependency management, and build automation in a Linux environment.
+This module demonstrates the implementation of modular programming principles in C, along with a basic build automation workflow using `make`. The project is structured to improve maintainability, scalability, and clarity by separating responsibilities across multiple components.
 
-## Key Concepts Learned
+## Overview
 
-### 1. Header Files (.h) & Prototypes
+The Mini ERP system is a simple console-based application designed to handle basic invoice processing operations.
 
-- Defined interfaces ("contracts") between different parts of the system.
-- Learned about **Header Guards** (`#ifndef`, `#define`, `#endif`) to prevent redefinition errors during preprocessing.
+## Project Structure
 
-### 2. Separation of Concerns
+```text
+├── main.c
+├── invoice.c
+├── invoice.h
+├── utils.c
+├── utils.h
+└── Makefile
+```
 
-Divided the Mini ERP system into specialized modules:
+## How It Works
 
-- `invoice.h/c`: Business logic for calculations (totals, discounts).
-- `utils.h/c`: Utility functions (UI formatting, banners).
-- `main.c`: The entry point and application orchestrator.
+The application starts in `main.c`, where user input is collected and processed before being passed to other modules.
+It is then handled by the `invoice` module for calculation logic, while the `utils` module manages output formatting and display.
 
-### 3. Object Files (.o) & Linking
+This separation ensures a clear distinction between business logic and presentation.
 
-- Compiled individual source files into object files using the `-c` flag in GCC.
-- Understood the linking process where multiple `.o` files are combined into a single executable.
+## Core Concepts
 
-### 4. Build Automation with Makefile
+### Header Files & Interfaces
 
-- Created a `Makefile` to automate the build process.
-- Understood how `make` uses file timestamps to recompile only modified files, improving build efficiency.
+Header files (`.h`) define the public interface of each module. They expose function prototypes and shared declarations, allowing different parts of the program to communicate in a controlled way.
+
+Header guards are used to prevent multiple inclusions during compilation:
+
+```c
+#ifndef FILE_NAME_H
+#define FILE_NAME_H
+
+// declarations
+
+#endif
+```
+
+### Separation of Concerns
+
+The system is divided into independent modules, each responsible for a specific task. This improves code readability, maintainability, and scalability.
+
+### Compilation & Linking
+
+Each source file is compiled into an object file (`.o`) using the `-c` flag. These object files are then linked together to produce the final executable.
+
+### Build Automation
+
+A `Makefile` is used to automate the build process. It ensures that only modified files are recompiled based on file timestamps, improving efficiency.
+
+## Architecture
+
+The project follows a modular architecture with clearly defined responsibilities:
+
+- `main.c`  
+  Acts as the entry point and orchestrates the overall program flow, including user interaction.
+
+- `invoice.h/c`  
+  Contains business logic related to invoice calculations such as totals and discounts.
+
+- `utils.h/c`  
+  Provides utility functions for formatting and user interface output.
+
+This structure enforces a clear boundary between core logic and supporting functionality.
 
 ## How to Build
 
@@ -35,3 +76,7 @@ Make sure you are in the project root directory:
 make
 ./mini_erp_system
 ```
+
+## Notes
+
+This project serves as a foundational implementation of modular programming and build automation in C.

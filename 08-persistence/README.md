@@ -1,45 +1,82 @@
 # 08 - Data Persistence & Struct Arrays
 
-This module represents a key milestone in my C fundamentals journey, focusing on building a persistent Mini-ERP system that stores data on physical storage in a Linux environment.
+This module demonstrates the implementation of data persistence in C using structured data and binary file storage. The project extends the Mini ERP system by introducing file-based storage, allowing data to be saved and reloaded across program executions.
 
-## Key Concepts Learned
+## Overview
 
-### 1. Array of Structs
+The persistent Mini ERP system is a console-based application designed to manage item data and store it on disk. It simulates a basic data lifecycle, including in-memory processing and persistent storage.
 
-- Managed a collection of data objects (`Item`) using a contiguous block of memory.
-- Used `struct` to group multiple data types (name, price, qty) into a single entity.
+## Project Structure
 
-### 2. Dynamic Memory Allocation (Advanced)
+```text
+├── main.c
+├── invoice.c
+├── invoice.h
+├── utils.c
+├── utils.h
+├── Makefile
+└── database.dat
+```
 
-- Allocated memory dynamically using `malloc` based on user input (number of items).
-- Learned proper memory deallocation using `free` to prevent memory leaks in a production-like environment.
+## How It Works
 
-### 3. Binary File I/O (`.dat`)
+The application collects item data from user input and stores it in memory using an array of structs.  
+It is then written to a binary file for persistence. When needed, the application reads the file and reconstructs the data back into memory.
 
-- Transitioned from plain text (`.txt`) to binary format (`.dat`) for improved efficiency.
-- Used `fwrite` to write raw memory blocks directly to disk.
-- Used `fread` to reconstruct data from disk back into memory.
-- Observed that binary files are not human-readable via tools like `cat`, but are more efficient for machine processing.
+This process simulates a simple data lifecycle between runtime memory and physical storage.
 
-### 4. Data Lifecycle Management
+## Core Concepts
 
-- **Input Phase:** Collect data into RAM.
-- **Persistence Phase:** Save data from RAM to disk.
-- **Retrieval Phase:** Load data from disk back into RAM (simulating application restart).
+### Array of Structs
 
-## System Architecture
+Data is stored using an array of `struct`, allowing multiple fields (such as name, price, and quantity) to be grouped into a single entity and managed efficiently in memory.
 
-The project follows the modular structure developed in previous modules:
+### Dynamic Memory Allocation
 
-- `main.c`: Orchestrates input, save, and load operations.
-- `invoice.h/c`: Handles binary storage logic and calculations.
-- `utils.h/c`: Manages terminal UI and formatting.
-- `Makefile`: Automates build and cleanup processes.
+Memory is allocated at runtime using `malloc`, based on the number of items provided by the user.
+Allocated memory is properly released using `free` to prevent memory leaks.
 
-## How to Run
+### Binary File I/O
+
+The system uses binary files (`.dat`) for efficient data storage:
+
+- `fwrite` is used to write raw memory blocks directly to disk.
+- `fread` is used to read and reconstruct data from disk into memory.
+
+Binary format improves performance and storage efficiency, although it is not human-readable.
+
+### Data Lifecycle
+
+The application follows a simple data flow:
+
+- **Input Phase** → Data is collected and stored in memory
+- **Persistence Phase** → Data is written from memory to disk
+- **Retrieval Phase** → Data is loaded from disk back into memory
+
+## Architecture
+
+The project maintains a modular structure:
+
+- `main.c`: Handles program flow, including input, save, and load operations
+- `invoice.h/c`: Implements data processing and file persistence logic
+- `utils.h/c`: Provides utility functions for terminal output and formatting
+- `Makefile`: Automates build and cleanup processes
+
+## How to Build and Run
+
+Make sure you are in the project root directory:
 
 ```bash
 make
 ./persistent_erp
+```
+
+To inspect the binary file content:
+
+```bash
 hexdump -C database.dat
 ```
+
+## Notes
+
+This project serves as a foundational implementation of data persistence and memory management in C using binary file storage.
