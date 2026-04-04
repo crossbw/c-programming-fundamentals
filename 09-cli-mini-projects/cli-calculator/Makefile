@@ -9,7 +9,7 @@ endif
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c11
 TARGET = cli-calculator$(EXT)
-OBJ = main.o utils.o calculator.o
+OBJ = main.o utils.o calculator.o history.o
 
 all: $(TARGET)
 
@@ -21,4 +21,4 @@ $(TARGET): $(OBJ)
 
 .PHONY: clean
 clean:
-	$(RM) *.o $(TARGET)
+	$(RM) *.o $(TARGET) history.dat
